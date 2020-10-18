@@ -5,19 +5,23 @@
  */
 package persistence;
 
+import java.util.List;
+
 /**
  *
  * @author Charlène
  */
-public interface CrudOperation {
+public interface CrudOperation<T> {
     
-    public void findObject();
+    public T findObject(Object id);
     
-    public void createObject(); 
+    public void createObject(T object); 
     
-    public void updateObject();
+    public void updateObject(T object);
     
-    public void deleteObject(); 
+    public void deleteObject();
+    
+    public List<T> getAll(); 
     
     
 }
