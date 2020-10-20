@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.ShippingFXMLController">
     <children>
       <TabPane layoutX="36.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <tabs>
@@ -35,9 +35,9 @@
                               <Label text="Nom transporteur" />
                               <Label text="Info transporteur" GridPane.rowIndex="1" />
                               <Label text="Conditions transporteur" GridPane.rowIndex="2" />
-                              <TextField id="nameShipInser" GridPane.columnIndex="1" />
-                              <TextField id="infoShipInser" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <TextField id="condShipInser" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="nameShipInser" GridPane.columnIndex="1" />
+                              <TextField fx:id="infoShipInser" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="condShipInser" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                            </children>
                         </GridPane>
                         <Label layoutX="125.0" layoutY="22.0" prefHeight="17.0" prefWidth="294.0" text=" Création d'un transporteur" />
@@ -62,9 +62,9 @@
                               <Label text="Nom transporteur" />
                               <Label text="Info transporteur" GridPane.rowIndex="1" />
                               <Label text="Conditions transporteur" GridPane.rowIndex="2" />
-                              <TextField id="nameShipUpd" GridPane.columnIndex="1" />
-                              <TextField id="infoShipUpd" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <TextField id="condShipUpd" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="nameShipUpd" GridPane.columnIndex="1" />
+                              <TextField fx:id="infoShipUpd" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="condShipUpd" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                            </children>
                         </GridPane>
                         <Label layoutX="125.0" layoutY="22.0" prefHeight="17.0" prefWidth="294.0" text="Modification d'un transporteur" />

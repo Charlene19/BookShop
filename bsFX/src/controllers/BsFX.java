@@ -32,6 +32,7 @@ public class BsFX extends Application {
         stage.show();
     }
 
+    
     /**
      * @param args the command line arguments
      */

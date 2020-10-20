@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.OrderFXMLController">
       <children>
       <TabPane layoutX="36.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <tabs>
@@ -48,15 +48,15 @@
                               <Label text="Adresse facture" GridPane.rowIndex="6" />
                               <Label text="ID Client" GridPane.rowIndex="7" />
                               <Label text="Offre livraison ID" GridPane.rowIndex="8" />
-                              <TextField id="ordDateCrea" GridPane.columnIndex="1" />
-                              <TextField id="shipCrea" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <TextField id="ipInser" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              <TextField id="comInser" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                              <TextField id="priceHTInser" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                              <TextField id="addShipInser" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                              <TextField id="addBilInser" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                              <TextField id="ipInser" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                              <TextField id="shipIdInser" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                              <TextField fx:id="ordDateCrea" GridPane.columnIndex="1" />
+                              <TextField fx:id="shipCrea" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="ipInser" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="comInser" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField fx:id="priceHTInser" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <TextField fx:id="addShipInser" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <TextField fx:id="addBilInser" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <TextField fx:id="idInser" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <TextField fx:id="shipIdInser" GridPane.columnIndex="1" GridPane.rowIndex="8" />
                            </children>
                         </GridPane>
                         <ButtonBar layoutX="386.0" layoutY="314.0" prefHeight="40.0" prefWidth="200.0">
@@ -99,15 +99,15 @@
                               <Label text="Adresse facture" GridPane.rowIndex="6" />
                               <Label text="ID Client" GridPane.rowIndex="7" />
                               <Label text="Offre livraison ID" GridPane.rowIndex="8" />
-                              <TextField id="ordDateUp" GridPane.columnIndex="1" />
-                              <TextField id="shipUp" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <TextField id="ipUp" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              <TextField id="comUp" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                              <TextField id="priceHTUp" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                              <TextField id="addShipUp" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                              <TextField id="addBilUp" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                              <TextField id="ipUp" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                              <TextField id="shipIdUp" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                              <TextField fx:id="ordDateUp" GridPane.columnIndex="1" />
+                              <TextField fx:id="shipUp" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="ipUp" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="comUp" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField fx:id="priceHTUp" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <TextField fx:id="addShipUp" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <TextField fx:id="addBilUp" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <TextField fx:id="idUp" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <TextField fx:id="shipIdUp" GridPane.columnIndex="1" GridPane.rowIndex="8" />
                            </children>
                         </GridPane>
                         <ButtonBar layoutX="386.0" layoutY="314.0" prefHeight="40.0" prefWidth="200.0">
@@ -137,9 +137,9 @@
                               <Label text="par Order Id" />
                               <Label text="par Client Id" GridPane.rowIndex="1" />
                               <Label text="par Date" GridPane.rowIndex="2" />
-                              <TextField GridPane.columnIndex="1" />
-                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="idSe" GridPane.columnIndex="1" />
+                              <TextField fx:id="idCustSe" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="DateSe" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                            </children>
                         </GridPane>
                         <Label layoutX="157.0" layoutY="14.0" prefHeight="17.0" prefWidth="226.0" text="Recherche d'une commande" />

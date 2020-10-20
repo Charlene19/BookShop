@@ -16,11 +16,19 @@ import javafx.scene.control.TextField;
  *
  * @author cda611
  */
-public class FXMLDocumentController implements Initializable {
+public class ShippingFXMLController implements Initializable {
     @FXML
-    private TextField user;
+    private TextField nameShipInser;
     @FXML
-    private TextField password;
+    private TextField infoShipInser;
+    @FXML
+    private TextField condShipInser;
+    @FXML
+    private TextField nameShipUpd;
+    @FXML
+    private TextField infoShipUpd;
+    @FXML
+    private TextField condShipUpd;
 
     /**
      * Initializes the controller class.

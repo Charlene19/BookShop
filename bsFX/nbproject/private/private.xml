@@ -3,15 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/bsFX/src/views/bookFXML.fxml</file>
-            <file>file:/E:/bsFX/src/views/editorFXML.fxml</file>
-            <file>file:/E:/bsFX/src/views/FXMLDocument.fxml</file>
-            <file>file:/E:/bsFX/src/views/orderFXML.fxml</file>
-            <file>file:/E:/bsFX/src/views/categoryFXML.fxml</file>
-            <file>file:/E:/bsFX/src/views/mainFXML.fxml</file>
-            <file>file:/E:/bsFX/src/views/eventFXML.fxml</file>
-            <file>file:/E:/bsFX/src/views/authorFXML.fxml</file>
-            <file>file:/E:/bsFX/src/views/shippingFXML.fxml</file>
+            <file>file:/C:/Users/CDA611/Desktop/BookShop/BookShop/bsFX/src/views/OrderFXMLController.java</file>
+            <file>file:/C:/Users/CDA611/Desktop/BookShop/BookShop/bsFX/src/controllers/FXMLDocumentController.java</file>
+            <file>file:/C:/Users/CDA611/Desktop/BookShop/BookShop/bsFX/src/views/shippingFXML.fxml</file>
+            <file>file:/C:/Users/CDA611/Desktop/BookShop/BookShop/bsFX/src/controllers/AuthorFXMLController.java</file>
+            <file>file:/C:/Users/CDA611/Desktop/BookShop/BookShop/bsFX/src/controllers/BsFX.java</file>
+            <file>file:/C:/Users/CDA611/Desktop/BookShop/BookShop/bsFX/src/controllers/CategoryFXMLController.java</file>
+            <file>file:/C:/Users/CDA611/Desktop/BookShop/BookShop/bsFX/src/controllers/BookFXMLController.java</file>
+            <file>file:/C:/Users/CDA611/Desktop/BookShop/BookShop/bsFX/src/views/ShippingFXMLController.java</file>
+            <file>file:/C:/Users/CDA611/Desktop/BookShop/BookShop/bsFX/src/controllers/MainFXMLController.java</file>
+            <file>file:/C:/Users/CDA611/Desktop/BookShop/BookShop/bsFX/src/views/mainFXML.fxml</file>
+            <file>file:/C:/Users/CDA611/Desktop/BookShop/BookShop/bsFX/src/controllers/EditorFXMLController.java</file>
+            <file>file:/C:/Users/CDA611/Desktop/BookShop/BookShop/bsFX/src/views/orderFXML.fxml</file>
         </group>
     </open-files>
 </project-private>

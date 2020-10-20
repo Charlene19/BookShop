@@ -9,18 +9,26 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.TextField;
+import javafx.scene.control.RadioButton;
 
 /**
  * FXML Controller class
  *
  * @author cda611
  */
-public class FXMLDocumentController implements Initializable {
+public class MainFXMLController implements Initializable {
     @FXML
-    private TextField user;
+    private RadioButton bookrb;
     @FXML
-    private TextField password;
+    private RadioButton authorrb;
+    @FXML
+    private RadioButton catrb;
+    @FXML
+    private RadioButton cusrb;
+    @FXML
+    private RadioButton ordrb;
+    @FXML
+    private RadioButton evtrb;
 
     /**
      * Initializes the controller class.

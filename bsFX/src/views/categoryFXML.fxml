@@ -9,7 +9,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.CategoryFXMLController">
     <children>
       <TabPane layoutX="36.0" layoutY="14.0" prefHeight="160.0" prefWidth="100.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <tabs>
@@ -20,15 +20,15 @@
                         <Label layoutX="110.0" layoutY="14.0" prefHeight="17.0" prefWidth="308.0" text="Création d'une catégorie" />
                         <Label layoutX="70.0" layoutY="87.0" prefHeight="17.0" prefWidth="139.0" text="Insertion catégorie parent" />
                         <Label layoutX="70.0" layoutY="135.0" prefHeight="17.0" prefWidth="137.0" text="Insertion catégorie enfant" />
-                        <ComboBox id="catParSel" layoutX="306.0" layoutY="131.0" prefWidth="150.0" />
-                        <TextField id="catChildInser" layoutX="307.0" layoutY="186.0" prefHeight="25.0" prefWidth="162.0" />
+                        <ComboBox fx:id="catParSel" layoutX="306.0" layoutY="131.0" prefWidth="150.0" />
+                        <TextField fx:id="catChildInser" layoutX="307.0" layoutY="186.0" prefHeight="25.0" prefWidth="162.0" />
                         <ButtonBar layoutX="381.0" layoutY="306.0" prefHeight="40.0" prefWidth="200.0">
                           <buttons>
-                            <Button id="cclButton" mnemonicParsing="false" text="Annuler" />
-                              <Button id="valButton" mnemonicParsing="false" text="Valider" />
+                            <Button fx:id="cclButton" mnemonicParsing="false" text="Annuler" />
+                              <Button fx:id="valButton" mnemonicParsing="false" text="Valider" />
                           </buttons>
                         </ButtonBar>
-                        <TextField id="catParInser" layoutX="300.0" layoutY="75.0" prefHeight="25.0" prefWidth="165.0" />
+                        <TextField fx:id="catParInser" layoutX="300.0" layoutY="75.0" prefHeight="25.0" prefWidth="165.0" />
                      </children></AnchorPane>
             </content>
           </Tab>
