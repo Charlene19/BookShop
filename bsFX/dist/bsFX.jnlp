@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="bsFX.jar" size="6470" download="eager" />
+    <jar href="bsFX.jar" size="6516" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="bsFX" >
     <param name="requiredFXVersion" value="8.0+"/>

@@ -96,7 +96,7 @@ public class BookDAO implements CrudOperation<Book> {
     for (Object obj : book) {
       
     }
-    
+   
     em.close();
     emf.close();
         return book;

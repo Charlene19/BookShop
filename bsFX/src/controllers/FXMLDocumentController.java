@@ -27,6 +27,25 @@ public class FXMLDocumentController implements Initializable {
         label.setText("Hello World!");
     }
     
+    public String getUser(){
+        String user = ""; 
+        return user;
+    }
+    
+    public void setUser(String user){
+        
+    }
+    
+    public String getPassword(){
+        String password = ""; 
+        return password;
+    }
+    
+    public void setPassword(String password){
+        
+    }
+    
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

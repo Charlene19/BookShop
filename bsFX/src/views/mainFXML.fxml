@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <children>
+      <BorderPane layoutX="129.0" layoutY="54.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <SplitPane dividerPositions="0.29797979797979796" focusTraversable="true" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="218.0">
+                     <children>
+                        <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
+                          <menus>
+                            <Menu mnemonicParsing="false" text="File">
+                              <items>
+                                <MenuItem mnemonicParsing="false" text="Book" />
+                                    <MenuItem mnemonicParsing="false" text="Author" />
+                                    <MenuItem mnemonicParsing="false" text="Category" />
+                                    <MenuItem mnemonicParsing="false" text="Publisher" />
+                                    <MenuItem mnemonicParsing="false" text="Customer" />
+                                    <MenuItem mnemonicParsing="false" text="Order" />
+                                    <SeparatorMenuItem mnemonicParsing="false" />
+                                    <MenuItem mnemonicParsing="false" text="Other..." />
+                              </items>
+                            </Menu>
+                            <Menu mnemonicParsing="false" text="Edit">
+                              <items>
+                                <MenuItem mnemonicParsing="false" text="Book" />
+                                    <MenuItem mnemonicParsing="false" text="Author" />
+                                    <MenuItem mnemonicParsing="false" text="Category" />
+                                    <MenuItem mnemonicParsing="false" text="Publisher" />
+                                    <MenuItem mnemonicParsing="false" text="Order" />
+                                    <SeparatorMenuItem mnemonicParsing="false" />
+                                    <MenuItem mnemonicParsing="false" text="Other..." />
+                              </items>
+                            </Menu>
+                            <Menu mnemonicParsing="false" text="My Account">
+                              <items>
+                                <MenuItem mnemonicParsing="false" text="Personnal Information" />
+                                    <SeparatorMenuItem mnemonicParsing="false" />
+                                    <MenuItem mnemonicParsing="false" text="Disconnect">
+                                       <graphic>
+                                          <ToggleButton mnemonicParsing="false" text="TB" />
+                                       </graphic>
+                                    </MenuItem>
+                              </items>
+                            </Menu>
+                          </menus>
+                        </MenuBar>
+                        <RadioButton fx:id="bookrb" layoutX="14.0" layoutY="45.0" mnemonicParsing="false" text="Book" />
+                        <RadioButton fx:id="authorrb" layoutX="14.0" layoutY="73.0" mnemonicParsing="false" text="Author" />
+                        <RadioButton fx:id="catrb" layoutX="14.0" layoutY="101.0" mnemonicParsing="false" text="Category" />
+                        <RadioButton fx:id="cusrb" layoutX="14.0" layoutY="133.0" mnemonicParsing="false" text="Customer" />
+                        <RadioButton fx:id="ordrb" layoutX="14.0" layoutY="160.0" mnemonicParsing="false" text="Order" />
+                        <RadioButton fx:id="evtrb" layoutX="14.0" layoutY="191.0" mnemonicParsing="false" text="Event" />
+                        <Button layoutX="101.0" layoutY="300.0" mnemonicParsing="false" text="Submit" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+              </items>
+            </SplitPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
