@@ -10,6 +10,8 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
+import bookshop.Employee; 
+
 
 /**
  * FXML Controller class
@@ -17,6 +19,7 @@ import javafx.scene.control.TextField;
  * @author cda611
  */
 public class FXMLDocumentController implements Initializable {
+    
     @FXML
     private TextField user;
     @FXML
@@ -30,4 +33,22 @@ public class FXMLDocumentController implements Initializable {
         // TODO
     }    
     
+    
+    public boolean checkEmployee(bookshop.Employee employe){
+        
+        String user = employe.getEmployeeLogin(); 
+        String password = employe.getEmployeePassword(); 
+        Employee emp; 
+        
+        if (user != null){
+            
+            
+            
+        }
+         
+		
+		return false;	
+        
+        
+    }
 }
