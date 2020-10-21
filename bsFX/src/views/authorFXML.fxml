@@ -37,15 +37,15 @@
                               <Label text="Nom" />
                               <Label text="Prénom" GridPane.rowIndex="1" />
                               <Label text="Post-it" GridPane.rowIndex="2" />
-                              <TextField id="nameInser" GridPane.columnIndex="1" />
-                              <TextField id="FnameInser" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <TextField id="postInser" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="nameInser" GridPane.columnIndex="1" />
+                              <TextField fx:id="FnameInser" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="postInser" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                            </children>
                         </GridPane>
                         <ButtonBar layoutX="379.0" layoutY="307.0" prefHeight="40.0" prefWidth="200.0">
                           <buttons>
-                            <Button id="cancelButton" mnemonicParsing="false" text="Annuler" />
-                              <Button id="valButton" mnemonicParsing="false" text="Valider" />
+                            <Button fx:id="cancelButton" mnemonicParsing="false" text="Annuler" />
+                              <Button fx:id="valButton" mnemonicParsing="false" text="Valider" />
                           </buttons>
                         </ButtonBar>
                      </children></AnchorPane>
@@ -70,15 +70,15 @@
                               <Label text="Nom" />
                               <Label text="Prénom" GridPane.rowIndex="1" />
                               <Label text="Post-it" GridPane.rowIndex="2" />
-                              <TextField id="nameInser" GridPane.columnIndex="1" />
-                              <TextField id="FnameInser" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <TextField id="postInser" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="nameUpd" GridPane.columnIndex="1" />
+                              <TextField fx:id="FnameUpd" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="postUpd" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                            </children>
                         </GridPane>
                         <ButtonBar layoutX="379.0" layoutY="307.0" prefHeight="40.0" prefWidth="200.0">
                           <buttons>
-                            <Button id="cancelButton" mnemonicParsing="false" text="Annuler" />
-                              <Button id="valButton" mnemonicParsing="false" text="Valider" />
+                            <Button fx:id="ccelButton" mnemonicParsing="false" text="Annuler" />
+                              <Button fx:id="vlButton" mnemonicParsing="false" text="Valider" />
                           </buttons>
                         </ButtonBar>
                      </children></AnchorPane>
@@ -103,9 +103,9 @@
                               <Label text="par Id" />
                               <Label text="par Nom" GridPane.rowIndex="1" />
                               <Label text="par Catégorie" GridPane.rowIndex="2" />
-                              <TextField id="idSearch" GridPane.columnIndex="1" />
-                              <TextField id="nameSearch" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <ComboBox id="catCB" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="idSearch" GridPane.columnIndex="1" />
+                              <TextField fx:id="nameSearch" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <ComboBox fx:id="catCB" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                            </children>
                         </GridPane>
                         <TableView layoutX="88.0" layoutY="157.0" prefHeight="144.0" prefWidth="354.0">
@@ -116,8 +116,8 @@
                         </TableView>
                         <ButtonBar layoutX="380.0" layoutY="312.0" prefHeight="40.0" prefWidth="200.0">
                           <buttons>
-                            <Button id="cclButton" mnemonicParsing="false" text="Annuler" />
-                              <Button id="flwButton" mnemonicParsing="false" text="Suivant" />
+                            <Button fx:id="cclButton" mnemonicParsing="false" text="Annuler" />
+                              <Button fx:id="flwButton" mnemonicParsing="false" text="Suivant" />
                           </buttons>
                         </ButtonBar>
                      </children></AnchorPane>
@@ -142,9 +142,9 @@
                               <Label text="par Id" />
                               <Label text="par Nom" GridPane.rowIndex="1" />
                               <Label text="par Catégorie" GridPane.rowIndex="2" />
-                              <TextField id="idSearch" GridPane.columnIndex="1" />
-                              <TextField id="nameSearch" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <ComboBox id="catCB" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="idDel" GridPane.columnIndex="1" />
+                              <TextField fx:id="nameDel" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <ComboBox fx:id="catCBDel" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                            </children>
                         </GridPane>
                         <TableView layoutX="88.0" layoutY="157.0" prefHeight="144.0" prefWidth="354.0">
@@ -155,8 +155,8 @@
                         </TableView>
                         <ButtonBar layoutX="380.0" layoutY="312.0" prefHeight="40.0" prefWidth="200.0">
                           <buttons>
-                            <Button id="cclButton" mnemonicParsing="false" text="Annuler" />
-                              <Button id="flwButton" mnemonicParsing="false" text="Suivant" />
+                            <Button fx:id="cclButtonD" mnemonicParsing="false" text="Annuler" />
+                              <Button fx:id="flwButtonD" mnemonicParsing="false" text="Suivant" />
                           </buttons>
                         </ButtonBar>
                      </children></AnchorPane>

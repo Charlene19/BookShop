@@ -37,14 +37,14 @@
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
                         <Label layoutX="160.0" layoutY="21.0" prefHeight="17.0" prefWidth="230.0" text="Modification d'une catégorie" />
-                        <ComboBox layoutX="256.0" layoutY="79.0" prefWidth="150.0" />
+                        <ComboBox fx:id="catParUpd"  layoutX="256.0" layoutY="79.0" prefWidth="150.0" />
                         <Label layoutX="146.0" layoutY="83.0" text="Catégorie" />
                         <Label layoutX="141.0" layoutY="142.0" prefHeight="26.0" prefWidth="88.0" text="Nouveau nom" />
-                        <TextField layoutX="264.0" layoutY="143.0" />
+                        <TextField fx:id="catNameUpd" layoutX="264.0" layoutY="143.0" />
                         <ButtonBar layoutX="379.0" layoutY="308.0" prefHeight="40.0" prefWidth="200.0">
                           <buttons>
-                            <Button mnemonicParsing="false" text="Annuler" />
-                              <Button mnemonicParsing="false" text="Valider" />
+                            <Button fx:id="cclBut" mnemonicParsing="false" text="Annuler" />
+                              <Button fx:id="valBut" mnemonicParsing="false" text="Valider" />
                           </buttons>
                         </ButtonBar>
                      </children></AnchorPane>
@@ -55,14 +55,14 @@
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
                         <Label layoutX="160.0" layoutY="21.0" prefHeight="17.0" prefWidth="230.0" text="Recherche d'une catégorie" />
-                        <ComboBox layoutX="256.0" layoutY="79.0" prefWidth="150.0" />
+                        <ComboBox fx:id="catParSrch" layoutX="256.0" layoutY="79.0" prefWidth="150.0" />
                         <Label layoutX="146.0" layoutY="83.0" text="Catégorie" />
                         <Label layoutX="141.0" layoutY="142.0" prefHeight="26.0" prefWidth="88.0" text="Par nom" />
-                        <TextField layoutX="264.0" layoutY="143.0" />
+                        <TextField fx:id="catName" layoutX="264.0" layoutY="143.0" />
                         <ButtonBar layoutX="379.0" layoutY="308.0" prefHeight="40.0" prefWidth="200.0">
                           <buttons>
-                            <Button mnemonicParsing="false" text="Annuler" />
-                              <Button mnemonicParsing="false" text="Valider" />
+                            <Button fx:id="cclCat" mnemonicParsing="false" text="Annuler" />
+                              <Button fx:id="cclSub"  mnemonicParsing="false" text="Valider" />
                           </buttons>
                         </ButtonBar>
                      </children></AnchorPane>
@@ -73,14 +73,14 @@
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
                         <Label layoutX="160.0" layoutY="21.0" prefHeight="17.0" prefWidth="230.0" text="Suppression d'une catégorie" />
-                        <ComboBox layoutX="256.0" layoutY="79.0" prefWidth="150.0" />
+                        <ComboBox fx:id="catParCB" layoutX="256.0" layoutY="79.0" prefWidth="150.0" />
                         <Label layoutX="146.0" layoutY="83.0" text="Catégorie" />
                         <Label layoutX="141.0" layoutY="142.0" prefHeight="26.0" prefWidth="88.0" text="Par nom" />
-                        <TextField layoutX="264.0" layoutY="143.0" />
+                        <TextField fx:id="catParDel"layoutX="264.0" layoutY="143.0" />
                         <ButtonBar layoutX="379.0" layoutY="308.0" prefHeight="40.0" prefWidth="200.0">
                           <buttons>
-                            <Button mnemonicParsing="false" text="Annuler" />
-                              <Button mnemonicParsing="false" text="Valider" />
+                            <Button fx:id="cclCatDel" mnemonicParsing="false" text="Annuler" />
+                              <Button fx:id="cclCatSub" mnemonicParsing="false" text="Valider" />
                           </buttons>
                         </ButtonBar>
                      </children></AnchorPane>
