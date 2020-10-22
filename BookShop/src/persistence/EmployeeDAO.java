@@ -13,6 +13,7 @@ import javax.persistence.NoResultException;
 import javax.persistence.Persistence;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 
 /**
  *
@@ -63,13 +64,14 @@ public class EmployeeDAO implements CrudOperation<Employee> {
         return emp;
     }
     
-    public Employee findEmployeByLogin(String name) throws DAOException {
+    public Employee findEmployeByLogin(String employeeLogin) throws DAOException {
         Employee emp = null;
          EntityManagerFactory emf = Persistence.createEntityManagerFactory("BookShopPU");
-       
-        String query = em.createNameQuery("Employee.findByEmployeeLogin").getSingleResult();
+          em = emf.createEntityManager();
+          
+        Query query = em.createNamedQuery("Employee.findByEmployeeLogin", Employee.class);
       try {
-        emp = em.find(Employee.class, name);
+        emp = (Employee) query.setParameter("employeeLogin", employeeLogin).getSingleResult();
        
         
            
@@ -82,8 +84,8 @@ public class EmployeeDAO implements CrudOperation<Employee> {
     }
 
     public static void main(String []args) throws DAOException{
-        EmployeeDAO em = new EmployeeDAO(); 
-        em.findEmployeByLogin(1l); 
-        System.out.println(em.toString());
+      EmployeeDAO ed = new EmployeeDAO(); 
+      Employee employe = ed.findEmployeByLogin("user");
+      System.out.println(employe);
     }
 }

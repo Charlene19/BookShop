@@ -41,7 +41,7 @@ import javax.xml.bind.annotation.XmlTransient;
     , @NamedQuery(name = "Order1.findByOrderUserIp", query = "SELECT o FROM Order1 o WHERE o.orderUserIp = :orderUserIp")
     , @NamedQuery(name = "Order1.findByOrderComment", query = "SELECT o FROM Order1 o WHERE o.orderComment = :orderComment")
     , @NamedQuery(name = "Order1.findByAssocShippingOfferCommandHtPrice", query = "SELECT o FROM Order1 o WHERE o.assocShippingOfferCommandHtPrice = :assocShippingOfferCommandHtPrice")})
-public class Order1 implements Serializable {
+public class Order implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -83,14 +83,14 @@ public class Order1 implements Serializable {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "orderId")
     private Collection<OrderRow> orderRowCollection;
 
-    public Order1() {
+    public Order() {
     }
 
-    public Order1(Long orderId) {
+    public Order(Long orderId) {
         this.orderId = orderId;
     }
 
-    public Order1(Long orderId, Date orderCreationDate, String orderShippingTimeLimit, String orderUserIp, BigDecimal assocShippingOfferCommandHtPrice) {
+    public Order(Long orderId, Date orderCreationDate, String orderShippingTimeLimit, String orderUserIp, BigDecimal assocShippingOfferCommandHtPrice) {
         this.orderId = orderId;
         this.orderCreationDate = orderCreationDate;
         this.orderShippingTimeLimit = orderShippingTimeLimit;
@@ -215,10 +215,10 @@ public class Order1 implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Order1)) {
+        if (!(object instanceof Order)) {
             return false;
         }
-        Order1 other = (Order1) object;
+        Order other = (Order) object;
         if ((this.orderId == null && other.orderId != null) || (this.orderId != null && !this.orderId.equals(other.orderId))) {
             return false;
         }

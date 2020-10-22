@@ -145,7 +145,7 @@ public class Employee implements Serializable {
 
     @Override
     public String toString() {
-        return "bookshop.Employee[ employeeId=" + employeeId + " ]";
+        return employeeId + " " + employeeLogin +" " + employeeDateStart;
     }
     
 }

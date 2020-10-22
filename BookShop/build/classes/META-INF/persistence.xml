@@ -6,7 +6,6 @@
     <class>bookshop.Customer</class>
     <class>bookshop.Group1</class>
     <class>bookshop.CardType</class>
-    <class>bookshop.Order1</class>
     <class>bookshop.Category</class>
     <class>bookshop.PackageStatus</class>
     <class>bookshop.Employee</class>
@@ -25,6 +24,7 @@
     <class>bookshop.Comment</class>
     <class>bookshop.Carrier</class>
     <class>bookshop.Publisher</class>
+    <class>bookshop.Order</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://localhost:1433;databaseName=BookShop"/>
       <property name="javax.persistence.jdbc.user" value="sa"/>
