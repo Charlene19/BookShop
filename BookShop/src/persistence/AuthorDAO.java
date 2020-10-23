@@ -107,7 +107,7 @@ public class AuthorDAO implements CrudOperation<Author> {
                 }
                 throw new SQLException(e.getMessage());
             } catch (SQLException ex) {
-                Logger.getLogger(AuthorDAO.class.getName()).log(Level.SEVERE, null, ex);
+                //  Logger.getLogger(AuthorDAO.class.getName()).log(Level.SEVERE, null, ex);
             }
         } finally {
             em.close();

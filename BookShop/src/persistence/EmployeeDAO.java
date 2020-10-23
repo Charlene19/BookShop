@@ -110,7 +110,7 @@ public class EmployeeDAO implements CrudOperation<Employee> {
                 }
                 throw new SQLException(e.getMessage());
             } catch (SQLException ex) {
-                Logger.getLogger(EmployeeDAO.class.getName()).log(Level.SEVERE, null, ex);
+             //   Logger.getLogger(EmployeeDAO.class.getName()).log(Level.SEVERE, null, ex);
             }
         } finally {
             em.close();
