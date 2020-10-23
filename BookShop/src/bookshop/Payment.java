@@ -49,7 +49,7 @@ public class Payment implements Serializable {
     private CardType cardTypeId;
     @JoinColumn(name = "ORDER_ID", referencedColumnName = "ORDER_ID")
     @ManyToOne(optional = false)
-    private Order orderId;
+    private Order1 orderId;
 
     public Payment() {
     }
@@ -99,11 +99,11 @@ public class Payment implements Serializable {
         this.cardTypeId = cardTypeId;
     }
 
-    public Order getOrderId() {
+    public Order1 getOrderId() {
         return orderId;
     }
 
-    public void setOrderId(Order orderId) {
+    public void setOrderId(Order1 orderId) {
         this.orderId = orderId;
     }
 

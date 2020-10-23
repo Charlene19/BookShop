@@ -6,12 +6,17 @@
 package persistence;
 
 import bookshop.Book;
+import java.sql.SQLException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
+import javax.persistence.NoResultException;
 import javax.persistence.Persistence;
-import javax.persistence.Query;
+import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
 
 /**
  *
@@ -19,89 +24,112 @@ import javax.persistence.Query;
  */
 public class BookDAO implements CrudOperation<Book> {
 
+    @PersistenceContext(unitName = "BookShopPU")
+    private EntityManager em;
+
     @Override
     public Book findObject(Object id) {
         
-        
-        EntityManagerFactory emf = Persistence
-        .createEntityManagerFactory("MaBaseDeTestPU");
-    EntityManager em = emf.createEntityManager();
+        Book book = null;
 
-    Book book = em.find(Book.class, 4);
-    if (book != null) {
-      
-    }
-    em.close();
-    emf.close();
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("BookShopPU");
+        em = emf.createEntityManager();
+        try {
+            book = em.find(Book.class, id);
+
+        } catch (NoResultException e) {
+            return null;
+        } catch (Exception e) {
+
+        }
         return book;
     }
 
     @Override
     public void createObject(Book object) {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("MaBaseDeTestPU");    
-    EntityManager em = emf.createEntityManager();    
-    EntityTransaction transac = em.getTransaction();
-    transac.begin();
-    Book book = new Book();
-   
-    em.persist(book);
-    transac.commit();
-    
-    em.close();    
-    emf.close();  
+        
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("BookShopPU");
+        em = emf.createEntityManager();
+        EntityTransaction transaction = em.getTransaction();
+
+        try {
+
+            transaction.begin();
+
+            em.persist(object);
+
+            em.flush();
+            em.clear();
+
+            transaction.commit();
+
+        } catch (Exception e) {
+            try {
+                if (transaction != null) {
+                    transaction.rollback();
+                }
+                throw new SQLException(e.getMessage());
+            } catch (SQLException ex) {
+                Logger.getLogger(BookDAO.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } finally {
+            em.close();
+        }
     }
 
     @Override
     public void updateObject(Book object) {
-         EntityManagerFactory emf = Persistence
-        .createEntityManagerFactory("MaBaseDeTestPU");
-    EntityManager em = emf.createEntityManager();
 
-    EntityTransaction transac = em.getTransaction();
-    transac.begin();
-
-    Query query = em.createQuery("select * from Book  where book.isbn='?'");
-    Book book = (Book) query.getSingleResult();
-    if (book == null) {
-     
-    } else {
-     
-
-     
-      em.flush();
-      
-      book = (Book) query.getSingleResult();
- 
-    }
-    
-    transac.commit();
-    
-    em.close();
-    emf.close();
     }
 
     @Override
-    public void deleteObject() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void deleteObject(Book object) {
+        
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("BookShopPU");
+        em = emf.createEntityManager();
+        EntityTransaction transaction = em.getTransaction();
+
+        try {
+
+            transaction.begin();
+
+            em.remove(object);
+
+            em.flush();
+            em.clear();
+
+            transaction.commit();
+
+        } catch (Exception e) {
+            try {
+                if (transaction != null) {
+                    transaction.rollback();
+                }
+                throw new SQLException(e.getMessage());
+            } catch (SQLException ex) {
+                Logger.getLogger(BookDAO.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } finally {
+            em.close();
+        }
     }
 
     @Override
     public List<Book> getAll() {
-        EntityManagerFactory emf = Persistence
-        .createEntityManagerFactory("MaBaseDeTestPU");
-    EntityManager em = emf.createEntityManager();
+        List<Book> bookL = null;
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("BookShopPU");
+        em = emf.createEntityManager();
 
-    Query query = em.createQuery("select * from Book where book.isbn = ?");
-    List book = query.getResultList();
-    for (Object obj : book) {
-      
+        TypedQuery query = em.createNamedQuery("Book.findAll", Book.class);
+        try {
+            bookL = (List<Book>) query.getResultList();
+
+        } catch (NoResultException e) {
+            return null;
+        } catch (Exception e) {
+
+        }
+        return bookL;
     }
-   
-    em.close();
-    emf.close();
-        return book;
-    }
 
-
-  
 }

@@ -24,12 +24,12 @@
     <class>bookshop.Comment</class>
     <class>bookshop.Carrier</class>
     <class>bookshop.Publisher</class>
-    <class>bookshop.Order</class>
+    <class>bookshop.Order1</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://localhost:1433;databaseName=BookShop"/>
-      <property name="javax.persistence.jdbc.user" value="sa"/>
+      <property name="javax.persistence.jdbc.user" value="cha"/>
       <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
-      <property name="javax.persistence.jdbc.password" value="sa"/>
+      <property name="javax.persistence.jdbc.password" value="eminem"/>
     </properties>
   </persistence-unit>
 </persistence>

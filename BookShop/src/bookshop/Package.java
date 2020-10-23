@@ -56,7 +56,7 @@ public class Package implements Serializable {
         @JoinColumn(name = "PACKAGE_ID", referencedColumnName = "PACKAGE_ID")}, inverseJoinColumns = {
         @JoinColumn(name = "ORDER_ID", referencedColumnName = "ORDER_ID")})
     @ManyToMany
-    private Collection<Order> order1Collection;
+    private Collection<Order1> order1Collection;
 
     public Package() {
     }
@@ -104,11 +104,11 @@ public class Package implements Serializable {
     }
 
     @XmlTransient
-    public Collection<Order> getOrder1Collection() {
+    public Collection<Order1> getOrder1Collection() {
         return order1Collection;
     }
 
-    public void setOrder1Collection(Collection<Order> order1Collection) {
+    public void setOrder1Collection(Collection<Order1> order1Collection) {
         this.order1Collection = order1Collection;
     }
 

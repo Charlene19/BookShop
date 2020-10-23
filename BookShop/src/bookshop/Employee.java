@@ -11,6 +11,8 @@ import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.NamedQueries;
@@ -40,6 +42,7 @@ public class Employee implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name = "EMPLOYEE_ID")
     private Long employeeId;
     @Basic(optional = false)
@@ -67,6 +70,14 @@ public class Employee implements Serializable {
     }
 
     public Employee(Long employeeId, String employeeLogin, String employeePassword, Date employeeDateStart, Date employeeDateEnd) {
+        this.employeeId = employeeId;
+        this.employeeLogin = employeeLogin;
+        this.employeePassword = employeePassword;
+        this.employeeDateStart = employeeDateStart;
+        this.employeeDateEnd = employeeDateEnd;
+    }
+    
+    public Employee( String employeeLogin, String employeePassword, Date employeeDateStart, Date employeeDateEnd) {
         this.employeeId = employeeId;
         this.employeeLogin = employeeLogin;
         this.employeePassword = employeePassword;

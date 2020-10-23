@@ -61,7 +61,7 @@ public class OrderRow implements Serializable {
     private Comment commentId;
     @JoinColumn(name = "ORDER_ID", referencedColumnName = "ORDER_ID")
     @ManyToOne(optional = false)
-    private Order orderId;
+    private Order1 orderId;
 
     public OrderRow() {
     }
@@ -133,11 +133,11 @@ public class OrderRow implements Serializable {
         this.commentId = commentId;
     }
 
-    public Order getOrderId() {
+    public Order1 getOrderId() {
         return orderId;
     }
 
-    public void setOrderId(Order orderId) {
+    public void setOrderId(Order1 orderId) {
         this.orderId = orderId;
     }
 

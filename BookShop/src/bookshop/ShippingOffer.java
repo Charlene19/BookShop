@@ -62,7 +62,7 @@ public class ShippingOffer implements Serializable {
     @ManyToOne(optional = false)
     private Carrier carrierId;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "shippingOfferId")
-    private Collection<Order> order1Collection;
+    private Collection<Order1> order1Collection;
 
     public ShippingOffer() {
     }
@@ -135,11 +135,11 @@ public class ShippingOffer implements Serializable {
     }
 
     @XmlTransient
-    public Collection<Order> getOrder1Collection() {
+    public Collection<Order1> getOrder1Collection() {
         return order1Collection;
     }
 
-    public void setOrder1Collection(Collection<Order> order1Collection) {
+    public void setOrder1Collection(Collection<Order1> order1Collection) {
         this.order1Collection = order1Collection;
     }
 

@@ -10,6 +10,7 @@ import java.util.List;
 /**
  *
  * @author Charlène
+ * @param <T>
  */
 public interface CrudOperation<T> {
     
@@ -19,7 +20,7 @@ public interface CrudOperation<T> {
     
     public void updateObject(T object);
     
-    public void deleteObject();
+    public void deleteObject(T object);
     
     public List<T> getAll(); 
     
