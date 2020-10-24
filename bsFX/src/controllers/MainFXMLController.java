@@ -5,11 +5,26 @@
  */
 package controllers;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.RadioButton;
+import javafx.scene.control.Toggle;
+import javafx.scene.control.ToggleGroup;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -17,6 +32,7 @@ import javafx.scene.control.RadioButton;
  * @author cda611
  */
 public class MainFXMLController implements Initializable {
+
     @FXML
     private RadioButton bookrb;
     @FXML
@@ -35,7 +51,41 @@ public class MainFXMLController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
-    
+        ToggleGroup group = new ToggleGroup();
+        bookrb.setToggleGroup(group);
+        authorrb.setToggleGroup(group);
+        catrb.setToggleGroup(group);
+        cusrb.setToggleGroup(group);
+        ordrb.setToggleGroup(group);
+        evtrb.setToggleGroup(group);
+
+        group.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
+            public void changed(ObservableValue<? extends Toggle> ov, Toggle old_toggle, Toggle new_toggle) {
+
+                if (group.getSelectedToggle() != null) {
+                  RadioButton rb = (RadioButton)group.getSelectedToggle();
+                    if(rb.getText() == "Author")//faire une méthode avec switch case + une méthode
+                  
+                    try {
+                        Parent root = FXMLLoader.load(FXMLDocumentController.class.getResource("/views/mainFXML.fxml"));
+                        Stage stage = new Stage();
+                        Scene scene = new Scene(root);
+                        stage.setScene(scene);
+                        stage.show();
+                        
+                        AnchorPane apStage = (AnchorPane) scene.lookup("#contenair");
+                        AnchorPane an = (AnchorPane) FXMLLoader.load(MainFXMLController.class.getResource("/views/authorFXML.fxml")); 
+                        apStage.getChildren().add(an); 
+                     
+                        // Do something here with the userData of newly selected radioButton
+                    } catch (IOException ex) {
+                        Logger.getLogger(MainFXMLController.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                    
+                }
+
+            }
+        });
+
+    }
 }
