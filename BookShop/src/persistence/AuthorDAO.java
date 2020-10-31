@@ -6,6 +6,7 @@
 package persistence;
 
 import bookshop.Author;
+import bookshop.Employee;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.logging.Level;
@@ -16,6 +17,7 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.NoResultException;
 import javax.persistence.Persistence;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
 /**
@@ -45,6 +47,25 @@ public class AuthorDAO implements CrudOperation<Author> {
 
     }
 
+    public Author findByName(String name) throws DAOException {
+
+        Author author = null;
+
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("BookShopPU");
+        em = emf.createEntityManager();
+
+        Query query = em.createNamedQuery("Author.findByAuthorLName", Author.class);
+        try {
+            author = (Author) query.setParameter("authorLName", name).getSingleResult();
+
+        } catch (NoResultException e) {
+            return null;
+        } catch (Exception e) {
+            throw new DAOException(e);
+        }
+        return author;
+    }
+
     @Override
     public void createObject(Author object) {
 
@@ -62,6 +83,7 @@ public class AuthorDAO implements CrudOperation<Author> {
             em.clear();
 
             transaction.commit();
+            System.out.println("transac ok");
 
         } catch (Exception e) {
             try {

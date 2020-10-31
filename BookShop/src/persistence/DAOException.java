@@ -9,7 +9,7 @@ package persistence;
  *
  * @author cda611
  */
-class DAOException extends Exception {
+public class DAOException extends Exception {
 
     public DAOException(Exception e) {
         super(e); 
