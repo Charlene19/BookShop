@@ -34,8 +34,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/Charlene19/secondeBrain">
-    <img src="https://github.com/Charlene19/secondBrain/blob/master/static/img/sdbn.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/Charlene19/BookShop">
+    <img src="https://github.com/zvrsd/bookshop-back/blob/master/icone.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">BookShop Back</h3>
